@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  color: white;
+  background-color: hsl(225, 89%, 55%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  width: 50px;
+}
+
+button:hover {
+  background-color: hsl(225, 89%, 60%);
+  box-shadow: 3px 3px 10px hsl(225, 89%, 90%);
+}
+
+div {
+  display: inline-block;
+  text-align: center;
+  width: 400px;
+  border-color: hsl(225, 89%, 55%);
+  border: 5px solid;
+}
+
+span {
+  padding-bottom: 20px;
+  justify-content: last baseline;
+}
+
+#title {
+  font-weight: bold;
+}

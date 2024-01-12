@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            color: white;
+            background-color: hsl(225, 89%, 55%);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: hsl(225, 89%, 60%);
+            box-shadow: 3px 3px 10px hsl(225, 89%, 90%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Number Guessing Game</h1>
+    <div class="container">
+        <input type="text" id="inputNumber"><br>
+        <div>
+            <button id="guess" onclick="check()">Guess</button><br><br>
+        </div>
+        <span id="message"></span>
+    </div>
+
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let count = 0;
+        function check() {
+            let guess = document.getElementById("inputNumber").value
+            count++;
+            const resultElement = document.getElementById("message")
+            if (count < 10) {
+                if (Number(guess) === randomNumber) {
+                    resultElement.innerText = `Hurray!! The number is ${guess}
+                    No. of turns to find the number is ${count}`
+                    resultElement.style.color = 'green'
+                }
+                else if (Number(guess) > randomNumber) {
+                    resultElement.innerText = `The entered number is greater. Try Again!!`
+                }
+                else if (Number(guess) < randomNumber) {
+                    resultElement.innerText = `The entered number is lesser. Try Again!!`
+                }
+            }
+            else {
+                resultElement.innerText = `Oops!!! Out of turns! 
+                You have exceed 10 turns.`
+                resultElement.style.color = 'red'
+            }
+        }
+    </script>
+</body>
+
+</html>
