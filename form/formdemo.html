@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Demo</title>
+    <style>
+        body{
+          display: inline;
+          justify-content: center;
+        }
+    </style>
+  </head>
+  <body style="background-color: pink">
+    <div>
+      <form>
+        <label for="fname">First Name</label>
+        <input type="text" name="firstname" id="fname"  /><br>
+
+        <label for="lname">Last Name</label>
+        <input type="text" name="lastname" id="lname"  /><br>
+
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" max="80" min="3"  /><br>
+
+        <label for="mail">Mail ID</label>
+        <input type="email" name="mailid" id="mail"  /><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password"  /><br>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" name="mobilenumber" id="mobile"  /><br>
+
+        <label for="dob">DOB</label>
+        <input type="date" name="dob" id="dob"  /><br>
+
+        <label for="tob">Time of Birth</label>
+        <input type="time" name="time" id="tob"  /><br>
+
+        <input type="submit" name="submit" /><br>
+
+        <p id="data"></p>
+      </form>
+    </div>
+
+    <script>
+      let fname = document.getElementById("fname").value
+      let lname = document.getElementById("lname").value
+      let age =  document.getElementById("age").value
+      let mail = document.getElementById("mail").value
+      let password = document.getElementById("password").value
+      let mobilenumber = document.getElementById("mobilenumber").value
+      let dob = document.getElementById("dob").value
+      let tob = document.getElementById("tob").value
+
+      let data = document.createElement("p")
+      data.textContent = fname, 
+      data.appendChild(fname, lname)
+    </script>
+  </body>
+</html>
