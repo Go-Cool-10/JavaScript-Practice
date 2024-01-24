@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p>This is a static paragraph</p>
+    <span id="newElement"></span>
+    <button onclick="addingElement()">click to add paragraph</button>
+
+    <script>
+      function addingElement() {
+        //creating a new element
+        let newPara = document.createElement("p");
+        newPara.textContent = "This is a dynamically generated paragraph";
+
+        //adding new element
+        let spanElement = document.getElementById("newElement");
+        spanElement.appendChild(newPara);
+      }
+    </script>
+  </body>
+</html>
