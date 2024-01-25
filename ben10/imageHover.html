@@ -12,19 +12,17 @@
       onmouseover="newImg()"
       onmouseout="oldImg()"
       src="./smallben.jpg"
-      alt="smallben"
+      alt="ben"
       height="2000px"
       width="2000px"
     />
 
     <script>
       function newImg() {
-        let imgElement = document.getElementById("img");
-        imgElement.src = "../ben10/bigben.jpg";
+        document.getElementById("img").src = "../ben10/bigben.jpg";
       }
       function oldImg() {
-        let imgElement = document.getElementById("img");
-        imgElement.src = "../ben10/smallben.jpg";
+        document.getElementById("img").src = "../ben10/smallben.jpg";
       }
 
       
