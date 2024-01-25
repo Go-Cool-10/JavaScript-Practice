@@ -1,6 +1,6 @@
 function factor(a) {
   return function (b) {
-    return a * b;
+    return `${a} * ${b} = ${a * b}`;
   };
 }
 let fun = factor(3);
