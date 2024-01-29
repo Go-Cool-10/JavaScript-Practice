@@ -35,3 +35,4 @@ person1.welcome();
 person1.name = "Krrish";
 person1.welcome();
 
+console.log(person1.name);
