@@ -4,6 +4,6 @@ let container = document.getElementById("container");
 
 products.forEach((product) => {
   const listItem = document.createElement("li");
-  listItem.textContent = `${product.title} - $${product.price}`;
+  listItem.innerHTML = `<input type="checkbox"> ${product.title} - $${product.price}`;
   container.appendChild(listItem);
 });
